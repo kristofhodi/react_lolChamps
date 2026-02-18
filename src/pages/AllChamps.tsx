@@ -3,7 +3,7 @@ import type { Champion } from "../types/Champion";
 import { useNavigate } from "react-router-dom";
 import apiClient, { BACKEND_URL } from "../api/apiClient";
 import { toast } from "react-toastify";
-import { Col, Card, Button, Carousel, Container, Row } from "react-bootstrap";
+import { Col, Card, Button, Carousel, Container, Row, Nav, Navbar } from "react-bootstrap";
 
 const AllChamps = () => {
   const [champions, setChampions] = useState<Array<Champion>>([]);
@@ -48,10 +48,19 @@ const AllChamps = () => {
 
   return (
     <Container>
-      <Button onClick={() => navigate("/login")}>Login</Button> <br />
-      <Button onClick={() => navigate("/add-champ")} variant="danger">
-        Hozzáadás
-      </Button>
+       <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">React LoL Champs</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/add-champ">Hozzáadás</Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
       <Row xs={"auto"} md={"auto"} className="g-4">
         {champions.map((l) => generateCard(l))}
       </Row>
