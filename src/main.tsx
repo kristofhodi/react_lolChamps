@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import OneChamp from "./pages/OneChamp";
 import LoginPage from "./pages/LoginPage";
 import AddChamp from "./pages/AddChamp";
+import FavouritePage from "./pages/FavouritePage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/champions/:id" element={<OneChamp />} />
         <Route path="/add-champ" element={<AddChamp />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/fav-page" element={<FavouritePage />} />
       </Routes>
     </BrowserRouter>
     <ToastContainer />
