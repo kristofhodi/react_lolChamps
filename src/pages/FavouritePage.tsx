@@ -3,12 +3,14 @@ import { toast } from "react-toastify";
 import apiClient from "../api/apiClient";
 import type { Champion } from "../types/Champion";
 import { Button, Table } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const FavouritePage = () => {
   const [champions, setChampions] = useState<Array<Champion>>([]);
   const [fav, setFav] = useState<Array<number>>(
     JSON.parse(localStorage.getItem("fav") ?? "[]"),
   );
+  const navigate = useNavigate();
   useEffect(() => {
     apiClient
       .get("/champions")
@@ -57,7 +59,13 @@ const FavouritePage = () => {
               })}
             </tbody>
           </Table>
-          <Button onClick={() => setFav([])} variant="danger">
+          <Button
+            onClick={() => {
+              setFav([]);
+              navigate("/");
+            }}
+            variant="danger"
+          >
             Ürítés
           </Button>
         </>

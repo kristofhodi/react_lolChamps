@@ -64,7 +64,7 @@ const AllChamps = () => {
               }}
               variant="dark"
             >
-              Kedvenc
+              ❤️
             </Button>
           </Card.Body>
         </Card>
