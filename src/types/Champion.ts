@@ -5,7 +5,7 @@ export type Champion = {
   difficulty: number;
   blue_essence: number;
   damage_type: string;
-  images?: string[];
+  images: string[];
   description: string;
   id?: number;
 };

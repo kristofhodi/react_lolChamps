@@ -21,7 +21,7 @@ const AllChamps = () => {
       <Col>
         <Card style={{ width: "18rem" }}>
           <Carousel>
-            {c.images?.map((l) => (
+            {c.images.map((l) => (
               <Carousel.Item>
                 <img
                   src={`${BACKEND_URL}/images/${l}`}

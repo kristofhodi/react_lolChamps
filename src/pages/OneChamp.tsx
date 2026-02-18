@@ -32,7 +32,7 @@ const OneChamp = () => {
   return (
     <>
       <Carousel>
-        {champ?.images?.map((l) => (
+        {champ?.images.map((l) => (
           <Carousel.Item>
             <img src={`${BACKEND_URL}/images/${l}`} width={500} height={300} />
           </Carousel.Item>

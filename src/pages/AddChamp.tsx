@@ -70,6 +70,15 @@ const AddChamp = () => {
         value={champ.damage_type}
         onChange={(e) => setChamp({ ...champ, damage_type: e.target.value })}
       />
+      <h2>Images</h2>
+      <input
+        type="text"
+        value={champ.images}
+        onChange={(e) =>
+          setChamp({ ...champ, images: e.target.value.split(",") })
+        }
+      />
+
       <h2>Description</h2>
       <input
         type="text"
