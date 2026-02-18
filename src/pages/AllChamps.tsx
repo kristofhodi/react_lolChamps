@@ -25,8 +25,8 @@ const AllChamps = () => {
               <Carousel.Item>
                 <img
                   src={`${BACKEND_URL}/images/${l}`}
-                  width={500}
-                  height={300}
+                  width={285}
+                  height={160}
                 />
               </Carousel.Item>
             ))}
